@@ -49,7 +49,7 @@ def convert_to_wikibase_datatype(__value, __propcode, data_type):
         return URL(value=__value, prop_nr=__propcode)
     elif __data_type == "commonsMedia":
         return CommonsMedia(value=__value, prop_nr=__propcode)
-    elif __data_type == "externalId":
+    elif (__data_type == "externalId") or (__data_type == "external-id"):
         return ExternalID(value=__value, prop_nr=__propcode)
     elif __data_type == "form":
         return Form(value=__value, prop_nr=__propcode)
