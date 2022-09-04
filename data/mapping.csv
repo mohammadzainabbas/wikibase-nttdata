@@ -10,5 +10,5 @@ Task,wikibase-item,internal,,Name of the main task,Project Title
 Owner,string,internal,,Name of the Project Owner,Project Owner
 Member,string,internal,,Name of the Project Member,Project Member
 Duration (in days),time,internal,,Duration of the project,Project Duration
-Task Start date,external-id,external,P580,Starting date of SEMBU task,Start time
-Task End date,external-id,external,P582,Ending date of SEMBU task,End time
+Task Start date,time,internal,,Starting date of SEMBU task,Start time
+Task End date,time,internal,,Ending date of SEMBU task,End time
