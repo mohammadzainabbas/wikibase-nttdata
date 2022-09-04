@@ -162,5 +162,7 @@ def main() -> None:
     else:
         print_error("Unexpected data type")
 
+    pd.DataFrame(__res).to_csv(items_data, index=False)
+
 if __name__ == "__main__":
     main()
