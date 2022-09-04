@@ -39,9 +39,9 @@ def convert_to_wikibase_datatype(__value, __propcode, data_type):
     """
     if __data_type == "string": 
         return String(value=__value, prop_nr=__propcode)
-    elif (__data_type == "item") or (__data_type == "wikibase-item"):
+    elif (__data_type == "item") or (__data_type == WikibaseDatatype.ITEM):
         return Item(value=__value, prop_nr=__propcode)
-    elif __data_type == "quantity":
+    elif __data_type == WikibaseDatatype.QUANTITY:
         return Quantity(value=__value, prop_nr=__propcode)
     elif __data_type == "time":
         return Time(value=__value, prop_nr=__propcode)
