@@ -1,12 +1,2 @@
 ﻿column,data_type,description,alias
-Client,string,Organization,Organization
 Client Type,string,Organization type,Organization Type
-
-Project,string,Name of the SEMBU Project,Project name
-Project Type,string,Type of Project,Project type
-Task,wikibase-item,Name of the main task,Project Title
-Owner,string,Name of the Project Owner,Project Owner
-Member,string,Name of the Project Member,Project Member
-Duration (in days),time,Duration of the project,Project Duration
-Task Start date,time,Starting date of SEMBU task,Start time
-Task End date,time,Ending date of SEMBU task,End time
