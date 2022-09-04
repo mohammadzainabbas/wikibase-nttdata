@@ -1,14 +1,4 @@
 ﻿column,data_type,type,mapping_code,description,alias
-Id,string,internal,,Unique identifier for a SEMBU team member,ID
-Name,external-id,external,P735,First name/given name of SEMBU team member,First name
-Family Name,external-id,external,P734,Surname/Family name of SEMBU team member,Last name
-Birthdate,external-id,external,P569,Date of birth,DOB
-Nationality,external-id,external,P27,Nationality of SEMBU team member,Citizenship
-Category,wikibase-item,internal,,Category in which SEMBU team member's expertise lies,Knows about
-Start date,external-id,external,P580,Joining date of SEMBU team member,Start time
-End date,external-id,external,P582,Ending date of SEMBU team member,End time
-
-
 Client Type,string,internal,,Organization type,Organization Type
 Client,string,internal,,Organization,Organization
 Project,string,internal,,Name of the SEMBU Project,Project name
@@ -16,6 +6,6 @@ Project Type,string,internal,,Type of Project,Project type
 Task,string,internal,,Name of the main task,Project Title
 Owner,string,internal,,Name of the Project Owner,Project Owner
 Member,string,internal,,Name of the Project Member,Project Member
-Duration (in days),
-Start date
-End date
+Duration (in days),time,internal,,Duration of the project,Project Duration
+Start date,external-id,external,P580,Joining date of SEMBU team member,Start time
+End date,external-id,external,P582,Ending date of SEMBU team member,End time
