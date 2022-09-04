@@ -28,7 +28,7 @@ def create_mapping(file_name, wbi):
     # Read .csv file to create mappings
     __df = pd.read_csv(join(file_name))
     
-    if __df.empty: return
+    if __df.empty: return list()
 
     columns_with_mappings = list(__df.T.to_dict().values())
     __mapping = list()
