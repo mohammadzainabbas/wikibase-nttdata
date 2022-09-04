@@ -9,7 +9,7 @@ from os.path import join, isfile, exists, isdir, abspath, pardir
 from os import PathLike, listdir, getcwd
 import pandas as pd
 from wikibaseintegrator.datatypes import (URL, CommonsMedia, ExternalID, Form, GeoShape, GlobeCoordinate, Item, Lexeme, Math, MonolingualText, MusicalNotation, Property, Quantity, Sense, String, TabularData, Time)
-from wikibaseintegrator.wbi_enums import ActionIfExists, WikibaseDatePrecision, WikibaseRank, WikibaseSnakType
+from wikibaseintegrator.wbi_enums import ActionIfExists, WikibaseDatePrecision, WikibaseRank, WikibaseSnakType, WikibaseDatatype
 from wikibaseintegrator.wbi_exceptions import MissingEntityException, ModificationFailed, MWApiError
 import pickle
 
