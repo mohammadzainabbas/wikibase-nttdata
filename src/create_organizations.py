@@ -124,7 +124,8 @@ def main() -> None:
     login = wbi_login.Login(user=WDUSER, password=WDPASS)
     wbi = WikibaseIntegrator(login=login)
 
-    parent_dir = abspath(join(getcwd(), pardir))
+    # parent_dir = abspath(join(getcwd(), pardir))
+    parent_dir = join("/root", "wikibase-nttdata")
     data_dir = join(parent_dir, "data")
     project_data = join(data_dir, "BDMA_Projects_v1.csv")
     column_mapping_data = join(data_dir, "column_mapping.csv")
