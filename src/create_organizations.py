@@ -33,7 +33,7 @@ def setup_config():
     wbi_config['SPARQL_ENDPOINT_URL'] = '"http://139.144.66.193:8282/proxy/wdqs/bigdata/namespace/wdq/sparql"'
     wbi_config['WIKIBASE_URL'] = 'http://wikibase.svc'
 
-def convert_to_wikibase_datatype(__value, __propcode, data_type):
+def convert_to_wikibase_datatype(__value, __propcode, __data_type):
     """
     Convert and return Wikibase datatype
     """
