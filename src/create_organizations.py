@@ -44,6 +44,9 @@ def create_organization(data: dict, mapping: list, wbi: WikibaseIntegrator) -> N
         if prop not in mapping:
             print_error("Unable to find mapping for {}".format(prop))
             continue
+
+        __value = data[__key][prop]
+        __mapping = mapping[prop]
         
 
     print_log("Creating mapping for {}".format(file_name))
