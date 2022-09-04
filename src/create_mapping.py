@@ -6,7 +6,7 @@ from wikibaseintegrator import wbi_login
 from wikibaseintegrator import datatypes
 from wikibaseintegrator.wbi_config import config as wbi_config
 from os.path import join, isfile, exists, isdir, abspath, pardir
-from os import listdir, getcwd
+from os import PathLike, listdir, getcwd
 import pandas as pd
 from wikibaseintegrator.datatypes import (URL, CommonsMedia, ExternalID, Form, GeoShape, GlobeCoordinate, Item, Lexeme, Math, MonolingualText, MusicalNotation, Property, Quantity, Sense, String, TabularData, Time)
 from wikibaseintegrator.wbi_enums import ActionIfExists, WikibaseDatePrecision, WikibaseRank, WikibaseSnakType
@@ -21,7 +21,7 @@ def setup_config():
     wbi_config['SPARQL_ENDPOINT_URL'] = '"http://139.144.66.193:8282/proxy/wdqs/bigdata/namespace/wdq/sparql"'
     wbi_config['WIKIBASE_URL'] = 'http://wikibase.svc'
 
-def create_mapping(file_name: os.Path, wbi: WikibaseIntegrator) -> list:
+def create_mapping(file_name: PathLike, wbi: WikibaseIntegrator) -> list:
     """
     Create mapping for all columns
     """
