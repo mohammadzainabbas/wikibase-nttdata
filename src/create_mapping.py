@@ -63,7 +63,7 @@ def create_mapping(file_name: PathLike, wbi: WikibaseIntegrator) -> list:
             continue
     return __mapping
 
-def main():
+def main() -> None:
     """
     main() function for wikibase integration
     """
