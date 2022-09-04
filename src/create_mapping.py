@@ -80,6 +80,12 @@ def main():
     login = wbi_login.Login(user=WDUSER, password=WDPASS)
     wbi = WikibaseIntegrator(login=login)
 
+    team_mapping = join(data_dir, "team_mapping.csv")
+    create_mapping(team_mapping)
+
+    team_mapping = join(data_dir, "team_mapping.csv")
+    create_mapping(team_mapping)
+
 
 if __name__ == "__main__":
     main()
