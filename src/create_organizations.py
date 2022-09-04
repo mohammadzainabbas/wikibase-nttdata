@@ -145,8 +145,5 @@ def main() -> None:
     else:
         print_error("Unexpected data type")
 
-    #save mapping to .csv file   
-    pd.DataFrame(__mapping).to_csv(join(data_dir, "column_mapping.csv"), index=False)
-
 if __name__ == "__main__":
     main()
