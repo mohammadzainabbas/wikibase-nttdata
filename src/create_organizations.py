@@ -37,41 +37,40 @@ def convert_to_wikibase_datatype(__value, __propcode, data_type):
     """
     Convert and return Wikibase datatype
     """
-    claim = None
     if __data_type == "string": 
-        claim = String(value=__value, prop_nr=__propcode)
+        return String(value=__value, prop_nr=__propcode)
     elif (__data_type == "item") or (__data_type == "wikibase-item"):
-        claim = Item(value=__value, prop_nr=__propcode)
+        return Item(value=__value, prop_nr=__propcode)
     elif __data_type == "quantity":
-        claim = Quantity(value=__value, prop_nr=__propcode)
+        return Quantity(value=__value, prop_nr=__propcode)
     elif __data_type == "time":
-        claim = Time(value=__value, prop_nr=__propcode)
+        return Time(value=__value, prop_nr=__propcode)
     elif __data_type == "url":
-        claim = URL(value=__value, prop_nr=__propcode)
+        return URL(value=__value, prop_nr=__propcode)
     elif __data_type == "commonsMedia":
-        claim = CommonsMedia(value=__value, prop_nr=__propcode)
+        return CommonsMedia(value=__value, prop_nr=__propcode)
     elif __data_type == "externalId":
-        claim = ExternalID(value=__value, prop_nr=__propcode)
+        return ExternalID(value=__value, prop_nr=__propcode)
     elif __data_type == "form":
-        claim = Form(value=__value, prop_nr=__propcode)
+        return Form(value=__value, prop_nr=__propcode)
     elif __data_type == "geoShape":
-        claim = GeoShape(value=__value, prop_nr=__propcode)
+        return GeoShape(value=__value, prop_nr=__propcode)
     elif __data_type == "globeCoordinate":
-        claim = GlobeCoordinate(value=__value, prop_nr=__propcode)
+        return GlobeCoordinate(value=__value, prop_nr=__propcode)
     elif __data_type == "lexeme":
-        claim = Lexeme(value=__value, prop_nr=__propcode)
+        return Lexeme(value=__value, prop_nr=__propcode)
     elif __data_type == "math":
-        claim = Math(value=__value, prop_nr=__propcode)
+        return Math(value=__value, prop_nr=__propcode)
     elif __data_type == "monolingualText":
-        claim = MonolingualText(value=__value, prop_nr=__propcode)
+        return MonolingualText(value=__value, prop_nr=__propcode)
     elif __data_type == "musicalNotation":
-        claim = MusicalNotation(value=__value, prop_nr=__propcode)
+        return MusicalNotation(value=__value, prop_nr=__propcode)
     elif __data_type == "property":
-        claim = Property(value=__value, prop_nr=__propcode)
+        return Property(value=__value, prop_nr=__propcode)
     elif __data_type == "sense":
-        claim = Sense(value=__value, prop_nr=__propcode)
+        return Sense(value=__value, prop_nr=__propcode)
     elif __data_type == "tabularData":
-        claim = TabularData(value=__value, prop_nr=__propcode)
+        return TabularData(value=__value, prop_nr=__propcode)
     else:
         print_error("Unable to find data type for {}".format(prop))
 
