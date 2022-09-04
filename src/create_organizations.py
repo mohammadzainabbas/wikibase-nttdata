@@ -99,9 +99,12 @@ def main() -> None:
     wbi = WikibaseIntegrator(login=login)
 
     __columns = ["Client Type", "Client"]
-    __df = pd.read_csv(project_data, usecols=__columns)
+    __df = pd.read_csv(project_data, usecols=__columns).drop_duplicates()
     __data = __df.set_index("Client").T.to_dict()
-    
+
+
+
+
 
 
 
