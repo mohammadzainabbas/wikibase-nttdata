@@ -87,6 +87,8 @@ def main():
     __team_mapping = create_mapping(team_mapping, wbi)
     __project_mapping = create_mapping(project_mapping, wbi)
 
+    pd.DataFrame(list(__team_mapping + __project_mapping)).to_csv(join(data_dir, "column_mapping.csv"), index=False)
+
     with open(join(data_dir, "column_mapping.pickle"), 'wb') as f:
         pickle.dump(list(__team_mapping + __project_mapping), f)
 
