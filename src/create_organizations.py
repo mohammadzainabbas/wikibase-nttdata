@@ -147,7 +147,7 @@ def main() -> None:
     __df = pd.read_csv(project_data, usecols=__columns).drop_duplicates()
     __data = __df.set_index("Client").T.to_dict()
 
-    __res = []
+    __res = list()
     if isinstance(__data, dict):
         # only one item
         __res.append(create_organization(__data, column_mapping, wbi))
