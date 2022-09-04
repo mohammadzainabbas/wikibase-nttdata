@@ -53,9 +53,9 @@ def convert_to_wikibase_datatype(__value, __propcode, data_type):
         return ExternalID(value=__value, prop_nr=__propcode)
     elif (__data_type == "form") or (__data_type == WikibaseDatatype.FORM):
         return Form(value=__value, prop_nr=__propcode)
-    elif __data_type == "geoShape":
+    elif (__data_type == "geoShape") or (__data_type == WikibaseDatatype.GEOSHAPE):
         return GeoShape(value=__value, prop_nr=__propcode)
-    elif __data_type == "globeCoordinate":
+    elif (__data_type == "globeCoordinate") or (__data_type == WikibaseDatatype.GLOBECOORDINATE):
         return GlobeCoordinate(value=__value, prop_nr=__propcode)
     elif __data_type == "lexeme":
         return Lexeme(value=__value, prop_nr=__propcode)
