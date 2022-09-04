@@ -4,6 +4,6 @@ Name,external-id,external,P735
 Family Name,external-id,external,P734
 Birthdate,external-id,external,P569
 Nationality,external-id,external,P27
-Category,string,internal,
+Category,wikibase-item,internal,
 Start date,external-id,external,P580
 End date,external-id,external,P582
