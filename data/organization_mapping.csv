@@ -1,2 +1,2 @@
 ﻿column,data_type,description,alias
-Client Type,string,Organization type,Organization Type;type of organization
+Client Type,string,Tells the type of the organization,Organization Type;type of organization;type of client
