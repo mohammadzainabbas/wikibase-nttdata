@@ -78,6 +78,8 @@ def main() -> None:
     team_mapping = join(data_dir, "team_mapping.csv")
     project_mapping = join(data_dir, "project_mapping.csv")
 
+    mapping_files = ['team_mapping.csv', 'project_mapping.csv']
+
     # Create login and WikibaseIntegrator object
     login = wbi_login.Login(user=WDUSER, password=WDPASS)
     wbi = WikibaseIntegrator(login=login)
