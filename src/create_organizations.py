@@ -47,6 +47,10 @@ def create_organization(data: dict, mapping: list, wbi: WikibaseIntegrator) -> N
 
         __value = data[__key][prop]
         __mapping = mapping[prop]
+
+        __data_type = __mapping["data_type"]
+        __propcode = __mapping["prop"]
+
         
 
     print_log("Creating mapping for {}".format(file_name))
