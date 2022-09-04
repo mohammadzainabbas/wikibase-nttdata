@@ -152,9 +152,6 @@ def main() -> None:
     if exists(items_data):
         __df = pd.read_csv(items_data)
         __res = __df.to_dict(orient="records")
-        
-
-
 
     if isinstance(__data, dict):
         # only one item
