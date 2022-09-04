@@ -45,11 +45,11 @@ def convert_to_wikibase_datatype(__value, __propcode, data_type):
         return Quantity(value=__value, prop_nr=__propcode)
     elif __data_type == WikibaseDatatype.TIME:
         return Time(value=__value, prop_nr=__propcode)
-    elif __data_type == "url":
+    elif __data_type == WikibaseDatatype.URL:
         return URL(value=__value, prop_nr=__propcode)
-    elif __data_type == "commonsMedia":
+    elif __data_type == WikibaseDatatype.COMMONSMEDIA:
         return CommonsMedia(value=__value, prop_nr=__propcode)
-    elif (__data_type == "externalId") or (__data_type == "external-id"):
+    elif (__data_type == "externalId") or (__data_type == WikibaseDatatype.EXTERNALID):
         return ExternalID(value=__value, prop_nr=__propcode)
     elif __data_type == "form":
         return Form(value=__value, prop_nr=__propcode)
