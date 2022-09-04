@@ -100,8 +100,9 @@ def main() -> None:
 
     __columns = ["Client Type", "Client"]
     __df = pd.read_csv(project_data, usecols=__columns)
+    __data = __df.set_index("Client").T.to_dict()
+    
 
-    __data = __df.T.to_dict().values()
 
 
     mapping_files = ['team_member_mapping.csv', 'project_mapping.csv', 'organization_mapping.csv', 'task_mapping.csv']
