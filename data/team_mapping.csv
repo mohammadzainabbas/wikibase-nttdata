@@ -1,5 +1,5 @@
-﻿column,data_type,type,mapping_code
-Id,string,internal,
+﻿column,data_type,type,mapping_code,description
+Id,string,internal,,
 Name,external-id,external,P735
 Family Name,external-id,external,P734
 Birthdate,external-id,external,P569
