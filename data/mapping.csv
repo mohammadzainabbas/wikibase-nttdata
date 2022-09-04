@@ -1,4 +1,7 @@
 column,data_type,type,mapping_code,description,alias
+
+
+
 Client Type,string,internal,,Organization type,Organization Type
 Client,string,internal,,Organization,Organization
 Project,string,internal,,Name of the SEMBU Project,Project name
