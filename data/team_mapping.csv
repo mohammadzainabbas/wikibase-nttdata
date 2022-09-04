@@ -1,5 +1,5 @@
 ﻿column,data_type,type,mapping_code,description
-Id,string,internal,,
+Id,string,internal,,Unique identifier for a SEMBU team member
 Name,external-id,external,P735
 Family Name,external-id,external,P734
 Birthdate,external-id,external,P569
