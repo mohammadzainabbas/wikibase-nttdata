@@ -1,6 +1,6 @@
 ﻿column,data_type,description,alias
 part of,string,Project is part of a given organization,part of;project of;project_of
-
+owner,
 
 
 
