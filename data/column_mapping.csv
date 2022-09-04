@@ -1,1 +1,19 @@
-
+column,prop,data_type,type,mapping_code
+Id,P1,string,internal,
+Name,P2,external-id,external,P735
+Family Name,P3,external-id,external,P734
+Birthdate,P4,external-id,external,P569
+Nationality,P5,external-id,external,P27
+Category,P6,wikibase-item,internal,
+Start date,P7,external-id,external,P580
+End date,P8,external-id,external,P582
+Client Type,P9,string,internal,
+Client,P10,string,internal,
+Project,P11,string,internal,
+Project Type,P12,string,internal,
+Task,P13,string,internal,
+Owner,P14,string,internal,
+Member,P15,string,internal,
+Duration (in days),P16,time,internal,
+Project Start date,P17,external-id,external,P580
+Project End date,P18,external-id,external,P582
