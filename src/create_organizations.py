@@ -86,6 +86,10 @@ def main() -> None:
     WDUSER, WDPASS = "Admin", "90J8XXXaO4Sr9^^Z"
     # WDUSER, WDPASS = "Mohammadzainabbas", "fHh!%shFa6^h"
 
+    # Create login and WikibaseIntegrator object
+    login = wbi_login.Login(user=WDUSER, password=WDPASS)
+    wbi = WikibaseIntegrator(login=login)
+
     parent_dir = abspath(join(getcwd(), pardir))
     data_dir = join(parent_dir, "data")
     project_data = join(data_dir, "BDMA_Projects_v1.csv")
@@ -93,10 +97,6 @@ def main() -> None:
     
     df = pd.read_csv(column_mapping_data)
     column_mapping = df.set_index("column").T.to_dict()
-
-    # Create login and WikibaseIntegrator object
-    login = wbi_login.Login(user=WDUSER, password=WDPASS)
-    wbi = WikibaseIntegrator(login=login)
 
     __columns = ["Client Type", "Client"]
     __df = pd.read_csv(project_data, usecols=__columns).drop_duplicates()
