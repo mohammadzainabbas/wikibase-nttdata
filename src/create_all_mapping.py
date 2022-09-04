@@ -81,9 +81,9 @@ def main() -> None:
     wbi = WikibaseIntegrator(login=login)
 
     mapping_files = ['team_member_mapping.csv', 'project_mapping.csv', 'organization_mapping.csv', 'task_mapping.csv']
-
+    __mapping
     for file in mapping_files:
-        project_mapping = join(data_dir, "project_mapping.csv")
+        project_mapping = join(data_dir, file)
 
 
 
