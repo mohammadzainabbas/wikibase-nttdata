@@ -5,5 +5,5 @@ Family Name,str,external
 Birthdate,date,external
 Nationality,str,external
 Category,str,internal
-Start date,date,P
-End date,date,P
+Start date,date,external
+End date,date,external
