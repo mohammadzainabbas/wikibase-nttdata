@@ -98,6 +98,8 @@ def main() -> None:
     login = wbi_login.Login(user=WDUSER, password=WDPASS)
     wbi = WikibaseIntegrator(login=login)
 
+    __columns = ["Client Type", "Client"]
+
     mapping_files = ['team_member_mapping.csv', 'project_mapping.csv', 'organization_mapping.csv', 'task_mapping.csv']
     __mapping = list()
     for file in mapping_files:
