@@ -52,7 +52,7 @@ def create_mapping(file_name, wbi):
             ident = [x for x in str(res).split('\n') if "_id='P" in x]
             if len(ident) == 1:
                 prop_code = ident[0].split("'")[1]
-                __mapping.append({ "column": __col_name, "prop": prop_code })
+                __mapping.append(dict({ "column": __col_name, "prop": prop_code }))
                 print("Column '{}' is mapped to '{}'".format(__col_name, prop_code))
             else:
                 raise Exception("Surprise, this method didn't work.")
@@ -60,6 +60,7 @@ def create_mapping(file_name, wbi):
         except ModificationFailed as e:
             print("Property '{}' already exists".format(__col_name))
             continue
+    return __mapping
 
 def main():
     """
