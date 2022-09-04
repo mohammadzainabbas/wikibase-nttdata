@@ -12,6 +12,14 @@ from wikibaseintegrator.datatypes import (URL, CommonsMedia, ExternalID, Form, G
 from wikibaseintegrator.wbi_enums import ActionIfExists, WikibaseDatePrecision, WikibaseRank, WikibaseSnakType
 from wikibaseintegrator.wbi_exceptions import MissingEntityException, ModificationFailed, MWApiError
 
+def setup_config():
+    """
+    Set up WBI config to use local docker installation
+    """
+    wbi_config['MEDIAWIKI_API_URL'] = 'http://139.144.66.193:8181/api.php'
+    wbi_config['SPARQL_ENDPOINT_URL'] = '"http://139.144.66.193:8282/proxy/wdqs/bigdata/namespace/wdq/sparql"'
+    wbi_config['WIKIBASE_URL'] = 'http://wikibase.svc'
+    
 
 def main():
     """
