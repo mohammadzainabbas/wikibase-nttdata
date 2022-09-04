@@ -19,7 +19,7 @@ def setup_config():
     wbi_config['MEDIAWIKI_API_URL'] = 'http://139.144.66.193:8181/api.php'
     wbi_config['SPARQL_ENDPOINT_URL'] = '"http://139.144.66.193:8282/proxy/wdqs/bigdata/namespace/wdq/sparql"'
     wbi_config['WIKIBASE_URL'] = 'http://wikibase.svc'
-    
+
 
 def main():
     """
@@ -32,6 +32,11 @@ def main():
     # Default variables
     WDUSER, WDPASS = "Admin", "90J8XXXaO4Sr9^^Z"
     # WDUSER, WDPASS = "Mohammadzainabbas", "fHh!%shFa6^h"
+
+    parent_dir = abspath(join(getcwd(), pardir))
+    data_dir = join(parent_dir, "data")
+    team_data = join(data_dir, "BDMA_Team_v1.csv")
+    project_data = join(data_dir, "BDMA_Projects_v1.csv")
 
     # Create login and WikibaseIntegrator object
     login = wbi_login.Login(user=WDUSER, password=WDPASS)
