@@ -20,6 +20,44 @@ def setup_config():
     wbi_config['SPARQL_ENDPOINT_URL'] = '"http://139.144.66.193:8282/proxy/wdqs/bigdata/namespace/wdq/sparql"'
     wbi_config['WIKIBASE_URL'] = 'http://wikibase.svc'
 
+def create_mapping(file_name):
+    """
+    Create mapping for all columns
+    """
+    # Read .csv file to create mappings
+    __df = pd.read_csv(join(file_name))
+    
+    if __df.empty: return
+
+    columns_with_mappings = list(__df.T.to_dict().values())
+
+    for item in columns_with_mappings:
+        __col_name = item['column']
+        __data_type = item['data_type']
+        __type = item['type']
+        __mapping_code = item['mapping_code']
+        __description = item['description']
+        __alias = item['alias']
+
+        try:
+
+            p = wbi.property.new(datatype=__data_type)
+            p.labels.set('en', __col_name)
+            p.descriptions.set('en', __description)
+            p.aliases.set('en', __alias)
+
+            res = p.write()
+
+            ident = [x for x in str(res).split('\n') if "_id='P" in x]
+            if len(ident) == 1:
+                prop_code = ident[0].split("'")[1]
+                print("Column '{}' is mapped to '{}'".format(__col_name, prop_code))
+            else:
+                raise Exception("Surprise, this method didn't work.")
+        
+        except ModificationFailed as e:
+            print("Property '{}' already exists".format(__col_name))
+            continue
 
 def main():
     """
