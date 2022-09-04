@@ -43,7 +43,7 @@ def convert_to_wikibase_datatype(__value, __propcode, data_type):
         return Item(value=__value, prop_nr=__propcode)
     elif __data_type == WikibaseDatatype.QUANTITY:
         return Quantity(value=__value, prop_nr=__propcode)
-    elif __data_type == "time":
+    elif __data_type == WikibaseDatatype.TIME:
         return Time(value=__value, prop_nr=__propcode)
     elif __data_type == "url":
         return URL(value=__value, prop_nr=__propcode)
