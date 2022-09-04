@@ -1,19 +1,18 @@
-column,prop,data_type,type,mapping_code
-Id,P1,string,internal,
-Name,P2,external-id,external,P735
-Family Name,P3,external-id,external,P734
-Birthdate,P4,external-id,external,P569
-Nationality,P5,external-id,external,P27
-Category,P6,wikibase-item,internal,
-Start date,P7,external-id,external,P580
-End date,P8,external-id,external,P582
-Client Type,P9,string,internal,
-Client,P10,string,internal,
-Project,P11,string,internal,
-Project Type,P12,string,internal,
-Task,P13,string,internal,
-Owner,P14,string,internal,
-Member,P15,string,internal,
-Duration (in days),P16,time,internal,
-Project Start date,P17,external-id,external,P580
-Project End date,P18,external-id,external,P582
+column,prop,data_type
+Id,P1,string
+Name,P2,string
+Family Name,P3,string
+Birthdate,P4,time
+Nationality,P5,string
+Start date,P6,time
+End date,P7,time
+Category,P8,wikibase-item
+part of,P10,string
+owner,P11,wikibase-item
+Client Type,P12,string
+Task Start date,P13,time
+Task End date,P14,time
+part_of,P15,string
+assigned to,P16,wikibase-item
+supervised by,P17,wikibase-item
+Duration (in days),P18,time
