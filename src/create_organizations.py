@@ -33,6 +33,23 @@ def setup_config():
     wbi_config['SPARQL_ENDPOINT_URL'] = '"http://139.144.66.193:8282/proxy/wdqs/bigdata/namespace/wdq/sparql"'
     wbi_config['WIKIBASE_URL'] = 'http://wikibase.svc'
 
+def convert_to_wikibase_datatype(value, prop_type):
+    """
+    Return datatype
+    """
+    if isinstance(value, str):
+        return String(value)
+    elif isinstance(value, int):
+        return Quantity(value)
+    elif isinstance(value, float):
+        return Quantity(value)
+    elif isinstance(value, list):
+        return value
+    elif isinstance(value, dict):
+        return value
+    else:
+        return None
+
 def create_organization(data: dict, mapping: list, wbi: WikibaseIntegrator) -> None:
     """
     Create mapping for all columns
@@ -93,7 +110,7 @@ def create_organization(data: dict, mapping: list, wbi: WikibaseIntegrator) -> N
             claim = TabularData(value=__value, prop_nr=__propcode)
         else:
             print_error("Unable to find data type for {}".format(prop))
-            
+
             item.set_claim(__propcode, String(__value))
 
 
