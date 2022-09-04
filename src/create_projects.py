@@ -84,7 +84,7 @@ def create_project(data: dict, mapping: list, wbi: WikibaseIntegrator) -> dict:
     item = wbi.item.new()
     item.labels.set("en", __key)
     item.aliases.set("en", __key)
-    item.descriptions.set("en", "An organization named {}".format(__key))
+    item.descriptions.set("en", "An project named {}".format(__key))
 
     __res = dict({ "item": __key })
 
