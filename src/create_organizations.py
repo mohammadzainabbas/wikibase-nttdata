@@ -116,6 +116,7 @@ def create_organization(data: dict, mapping: list, wbi: WikibaseIntegrator) -> d
     except ModificationFailed as e:
         print_error("Unable to create item for '{}'".format(__key))
         print_error(e)
+    return __res
 
 def main() -> None:
     """
