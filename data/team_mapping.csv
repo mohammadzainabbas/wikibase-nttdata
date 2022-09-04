@@ -1,9 +1,9 @@
 ﻿column,prop_type,type
 Id,num,external
-Name,str,P
-Family Name,str,P
-Birthdate,date,P
-Nationality,str,P
-Category,str,P
+Name,str,external
+Family Name,str,external
+Birthdate,date,external
+Nationality,str,external
+Category,str,internal
 Start date,date,P
 End date,date,P
