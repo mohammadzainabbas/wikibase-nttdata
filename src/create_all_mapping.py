@@ -39,7 +39,7 @@ def create_mapping(file_name: PathLike, wbi: WikibaseIntegrator) -> list:
         __type = item['type']
         __mapping_code = item['mapping_code']
         __description = item['description']
-        __alias = item['alias']
+        __alias = item['alias'].split(";")
 
         try:
 
