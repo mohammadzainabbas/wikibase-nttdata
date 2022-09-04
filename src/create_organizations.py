@@ -50,11 +50,52 @@ def create_organization(data: dict, mapping: list, wbi: WikibaseIntegrator) -> N
             print_error("Unable to find mapping for {}".format(prop))
             continue
 
-        __value = data[__key][prop]
         __mapping = mapping[prop]
 
-        __data_type = __mapping["data_type"]
+        __value = data[__key][prop]
         __propcode = __mapping["prop"]
+
+        __data_type = __mapping["data_type"]
+
+        if __data_type == "string":
+            claim = String(value=__value, prop_nr=__propcode)
+        elif __data_type == "item":
+            claim = Item(value=__value, prop_nr=__propcode)
+        elif __data_type == "quantity":
+            claim = Quantity(value=__value, prop_nr=__propcode)
+        elif __data_type == "time":
+            claim = Time(value=__value, prop_nr=__propcode)
+        elif __data_type == "url":
+            claim = URL(value=__value, prop_nr=__propcode)
+        elif __data_type == "commonsMedia":
+            claim = CommonsMedia(value=__value, prop_nr=__propcode)
+        elif __data_type == "externalId":
+            claim = ExternalID(value=__value, prop_nr=__propcode)
+        elif __data_type == "form":
+            claim = Form(value=__value, prop_nr=__propcode)
+        elif __data_type == "geoShape":
+            claim = GeoShape(value=__value, prop_nr=__propcode)
+        elif __data_type == "globeCoordinate":
+            claim = GlobeCoordinate(value=__value, prop_nr=__propcode)
+        elif __data_type == "lexeme":
+            claim = Lexeme(value=__value, prop_nr=__propcode)
+        elif __data_type == "math":
+            claim = Math(value=__value, prop_nr=__propcode)
+        elif __data_type == "monolingualText":
+            claim = MonolingualText(value=__value, prop_nr=__propcode)
+        elif __data_type == "musicalNotation":
+            claim = MusicalNotation(value=__value, prop_nr=__propcode)
+        elif __data_type == "property":
+            claim = Property(value=__value, prop_nr=__propcode)
+        elif __data_type == "sense":
+            claim = Sense(value=__value, prop_nr=__propcode)
+        elif __data_type == "tabularData":
+            claim = TabularData(value=__value, prop_nr=__propcode)
+        else:
+            print_error("Unable to find data type for {}".format(prop))
+            
+            item.set_claim(__propcode, String(__value))
+
 
 
 
