@@ -103,7 +103,13 @@ def main() -> None:
     __data = __df.set_index("Client").T.to_dict()
 
     if isinstance(__data, dict):
-        __data = 
+        # only one item
+        create_organization(__data, column_mapping, wbi)
+    elif isinstance(__data, list):
+        for item in __data:
+            create_organization(item, column_mapping, wbi)
+    else:
+        print_error("Unexpected data type")
 
 
 
