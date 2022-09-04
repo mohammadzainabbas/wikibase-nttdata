@@ -40,6 +40,8 @@ def create_organization(data: dict, mapping: list, wbi: WikibaseIntegrator) -> N
     __key = list(data.keys())[0]
     __props = data[__key]
 
+    for 
+
     print_log("Creating mapping for {}".format(file_name))
     # Read .csv file to create mappings
     __df = pd.read_csv(join(file_name))
