@@ -75,14 +75,17 @@ def main() -> None:
 
     parent_dir = abspath(join(getcwd(), pardir))
     data_dir = join(parent_dir, "data")
-    team_mapping = join(data_dir, "team_mapping.csv")
-    project_mapping = join(data_dir, "project_mapping.csv")
-
-    mapping_files = ['team_member_mapping.csv', 'project_mapping.csv', 'organization_mapping.csv', 'task_mapping.csv']
-
+    
     # Create login and WikibaseIntegrator object
     login = wbi_login.Login(user=WDUSER, password=WDPASS)
     wbi = WikibaseIntegrator(login=login)
+
+    mapping_files = ['team_member_mapping.csv', 'project_mapping.csv', 'organization_mapping.csv', 'task_mapping.csv']
+
+    for file in mapping_files:
+        project_mapping = join(data_dir, "project_mapping.csv")
+
+
 
     __team_mapping = create_mapping(team_mapping, wbi)
     __project_mapping = create_mapping(project_mapping, wbi)
