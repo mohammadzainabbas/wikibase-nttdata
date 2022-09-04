@@ -149,6 +149,10 @@ def main() -> None:
     __data = __df.set_index("Client").T.to_dict()
 
     __res = list()
+    if exists(items_data):
+        __df = pd.read_csv(items_data)
+        __res = __df.to_dict(orient="records")
+        
 
 
 
