@@ -83,10 +83,11 @@ def main():
     login = wbi_login.Login(user=WDUSER, password=WDPASS)
     wbi = WikibaseIntegrator(login=login)
 
-    __mapping = list()
+    __team_mapping = create_mapping(team_mapping, wbi)
+    __project_mapping = create_mapping(project_mapping, wbi)
 
-    create_mapping(team_mapping, wbi)
-    create_mapping(project_mapping, wbi)
+    __mapping = __team_mapping + __project_mapping
+
 
 if __name__ == "__main__":
     main()
