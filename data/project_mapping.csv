@@ -12,7 +12,7 @@ End date,external-id,external,P582,Ending date of SEMBU team member,End time
 Client Type,string,internal,,Organization type,Organization Type
 Client,string,internal,,Organization,Organization
 Project,string,internal,,Name of the SEMBU Project,Project name
-Project Type
+Project Type,string,internal,,Type of Project,
 Task
 Owner
 Member
