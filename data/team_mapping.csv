@@ -1,8 +1,9 @@
-﻿Id
-Name
-Family Name
-Birthdate
-Nationality
-Category
-Start date
-End date
+﻿column,type
+Id,P
+Name,P
+Family Name,P
+Birthdate,P
+Nationality,P
+Category,P
+Start date,P
+End date,P
