@@ -5,6 +5,7 @@ Task End date,time,Ending date of SEMBU task,task end time;end date of work;endi
 part_of,string,Task is part of a given project,task_of;task of
 assigned to,wikibase-item,Task is assigned to a SEMBU team member,assigned_to;responsibility of
 supervised by,wikibase-item,Task is supervised by a SEMBU team owner,supervised_by;owned by
+Duration (in days),time,Duration of the task,Task's duration;duration of task
 
 Client,string,Organization,Organization
 Project,string,Name of the SEMBU Project,Project name
@@ -12,4 +13,3 @@ Project Type,string,Type of Project,Project type
 Task,wikibase-item,Name of the main task,Project Title
 Owner,string,Name of the Project Owner,Project Owner
 Member,string,Name of the Project Member,Project Member
-Duration (in days),time,Duration of the project,Project Duration
