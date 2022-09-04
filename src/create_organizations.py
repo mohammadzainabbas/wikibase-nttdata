@@ -65,14 +65,14 @@ def convert_to_wikibase_datatype(__value, __propcode, data_type):
         return MonolingualText(value=__value, prop_nr=__propcode)
     elif (__data_type == "musicalNotation") or (__data_type == WikibaseDatatype.MUSICALNOTATION):
         return MusicalNotation(value=__value, prop_nr=__propcode)
-    elif __data_type == WikibaseDatatype.PROPERTY:
+    elif (__data_type == "property") or (__data_type == WikibaseDatatype.PROPERTY):
         return Property(value=__value, prop_nr=__propcode)
-    elif __data_type == "sense":
+    elif (__data_type == "sense") or (__data_type == WikibaseDatatype.SENSE):
         return Sense(value=__value, prop_nr=__propcode)
-    elif __data_type == "tabularData":
+    elif (__data_type == "tabularData") or (__data_type == WikibaseDatatype.TABULARDATA):
         return TabularData(value=__value, prop_nr=__propcode)
     else:
-        print_error("Unable to find data type for {}".format(prop))
+        print_error("Unable to find data type for {}".format(__propcode))
 
 def create_organization(data: dict, mapping: list, wbi: WikibaseIntegrator) -> None:
     """
