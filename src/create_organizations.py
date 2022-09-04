@@ -98,10 +98,9 @@ def create_organization(data: dict, mapping: list, wbi: WikibaseIntegrator) -> N
 
         __data_type = __mapping["data_type"]
 
+        __claim = convert_to_wikibase_datatype(__value, __propcode, __data_type)
+        item.claims.add(__claim)
         
-
-            item.set_claim(__propcode, String(__value))
-
 
 
 
