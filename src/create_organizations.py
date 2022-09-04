@@ -86,6 +86,8 @@ def create_organization(data: dict, mapping: list, wbi: WikibaseIntegrator) -> d
     item.aliases.set("en", __key)
     item.descriptions.set("en", "An organization named {}".format(__key))
 
+    __res = dict({ "item": __key })
+
     for prop in __props:
         if prop not in mapping:
             print_error("Unable to find mapping for {}".format(prop))
