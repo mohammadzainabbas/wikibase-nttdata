@@ -1,4 +1,4 @@
-﻿column,prop_type,type,mapping_code
+﻿column,data_type,type,mapping_code
 Id,num,internal,
 Name,str,external,P735
 Family Name,str,external,P734
