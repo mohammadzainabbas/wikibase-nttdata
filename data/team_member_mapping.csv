@@ -2,8 +2,8 @@
 Id,string,Unique identifier for a SEMBU team member,ID
 Name,string,First name/given name of SEMBU team member,First name;Given name;first name
 Family Name,string,Surname/Family name of SEMBU team member,Last name;Surname;family name
-Birthdate,time,Date of birth,DOB
-Nationality,string,Nationality of SEMBU team member,Citizenship
+Birthdate,time,Date of birth,DOB;birth date;date of birth
+Nationality,string,Nationality of SEMBU team member,Citizenship;nationality;citizen of
 Category,wikibase-item,Category in which SEMBU team member's expertise lies,Knows about
 Start date,string,Joining date of SEMBU team member,Start time
 End date,string,Ending date of SEMBU team member,End time
