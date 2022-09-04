@@ -1,9 +1,9 @@
 ﻿column,data_type,description,alias
-Id,string,internal,,Unique identifier for a SEMBU team member,ID
-Name,string,internal,,First name/given name of SEMBU team member,First name
-Family Name,string,internal,,Surname/Family name of SEMBU team member,Last name
-Birthdate,time,internal,,Date of birth,DOB
-Nationality,string,internal,,Nationality of SEMBU team member,Citizenship
-Category,wikibase-item,internal,,Category in which SEMBU team member's expertise lies,Knows about
-Start date,string,internal,,Joining date of SEMBU team member,Start time
-End date,string,internal,,Ending date of SEMBU team member,End time
+Id,string,Unique identifier for a SEMBU team member,ID
+Name,string,First name/given name of SEMBU team member,First name
+Family Name,string,Surname/Family name of SEMBU team member,Last name
+Birthdate,time,Date of birth,DOB
+Nationality,string,Nationality of SEMBU team member,Citizenship
+Category,wikibase-item,Category in which SEMBU team member's expertise lies,Knows about
+Start date,string,Joining date of SEMBU team member,Start time
+End date,string,Ending date of SEMBU team member,End time
