@@ -37,7 +37,7 @@ def create_organization(data: dict, mapping: list, wbi: WikibaseIntegrator) -> N
     """
     Create mapping for all columns
     """
-    __key = data.keys()
+    __key = list(data.keys())[0]
     print_log("Creating mapping for {}".format(file_name))
     # Read .csv file to create mappings
     __df = pd.read_csv(join(file_name))
