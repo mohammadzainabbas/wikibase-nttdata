@@ -1,14 +1,3 @@
 ﻿column,data_type,description,alias
 part of,string,Project is part of a given organization,part of;project of;project_of
 owner,wikibase-item,Project owner,supervised by;owned_by
-
-
-
-
-Project Type,string,Type of Project,Project type
-Task,wikibase-item,Name of the main task,Project Title
-Owner,string,Name of the Project Owner,Project Owner
-Member,string,Name of the Project Member,Project Member
-Duration (in days),time,Duration of the project,Project Duration
-Task Start date,time,Starting date of SEMBU task,Start time
-Task End date,time,Ending date of SEMBU task,End time
