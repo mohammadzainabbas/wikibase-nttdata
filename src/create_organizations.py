@@ -92,7 +92,6 @@ def main() -> None:
     
     df = pd.read_csv(column_mapping_data)
     column_mapping = df.set_index("column").T.to_dict()
-    
 
     # Create login and WikibaseIntegrator object
     login = wbi_login.Login(user=WDUSER, password=WDPASS)
