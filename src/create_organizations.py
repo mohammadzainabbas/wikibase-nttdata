@@ -37,7 +37,7 @@ def convert_to_wikibase_datatype(__value, __propcode, data_type):
     """
     Convert and return Wikibase datatype
     """
-    if __data_type == "string": 
+    if __data_type == WikibaseDatatype.STRING:
         return String(value=__value, prop_nr=__propcode)
     elif (__data_type == "item") or (__data_type == WikibaseDatatype.ITEM):
         return Item(value=__value, prop_nr=__propcode)
