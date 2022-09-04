@@ -87,12 +87,8 @@ def main():
     __team_mapping = create_mapping(team_mapping, wbi)
     __project_mapping = create_mapping(project_mapping, wbi)
 
-    __mapping = __team_mapping + __project_mapping
-
-    with open(join(data_dir, "column_mapping.txt")) as f:
-        # save list to a pickle file
-        pickle.dump(__mapping, f)
-
+    with open(join(data_dir, "column_mapping.pickle"), 'wb') as f:
+        pickle.dump(list(__team_mapping + __project_mapping), f)
 
 if __name__ == "__main__":
     main()
