@@ -1,4 +1,4 @@
-﻿column,type
+﻿column,prop_type,type
 Id,P
 Name,P
 Family Name,P
