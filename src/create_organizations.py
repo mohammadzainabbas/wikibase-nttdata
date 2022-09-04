@@ -72,7 +72,7 @@ def convert_to_wikibase_datatype(__value, __propcode, data_type):
     elif (__data_type == "tabularData") or (__data_type == WikibaseDatatype.TABULARDATA):
         return TabularData(value=__value, prop_nr=__propcode)
     else:
-        print_error("Unable to find data type for {}".format(__propcode))
+        print_error("Invalid data type for property: '{}'".format(__propcode))
 
 def create_organization(data: dict, mapping: list, wbi: WikibaseIntegrator) -> None:
     """
