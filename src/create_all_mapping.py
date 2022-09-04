@@ -13,6 +13,12 @@ from wikibaseintegrator.wbi_enums import ActionIfExists, WikibaseDatePrecision, 
 from wikibaseintegrator.wbi_exceptions import MissingEntityException, ModificationFailed, MWApiError
 import pickle
 
+def print_log(text: str) -> None:
+    """
+    Print log
+    """
+    print("[ log ] {}".format(text))
+
 def setup_config():
     """
     Set up WBI config to use local docker installation
@@ -52,12 +58,12 @@ def create_mapping(file_name: PathLike, wbi: WikibaseIntegrator) -> list:
             if len(ident) == 1:
                 prop_code = ident[0].split("'")[1]
                 __mapping.append(dict({ "column": __col_name, "prop": prop_code, "data_type": __data_type }))
-                print("Column '{}' is mapped to '{}'".format(__col_name, prop_code))
+                print_log("Column '{}' is mapped to '{}'".format(__col_name, prop_code))
             else:
                 raise Exception("Surprise, this method didn't work.")
         
         except ModificationFailed as e:
-            print("Property '{}' already exists".format(__col_name))
+            print_log("Property '{}' already exists".format(__col_name))
             continue
     return __mapping
 
