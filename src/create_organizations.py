@@ -95,14 +95,10 @@ def create_organization(data: dict, mapping: list, wbi: WikibaseIntegrator) -> N
 
         __value = data[__key][prop]
         __propcode = __mapping["prop"]
-
         __data_type = __mapping["data_type"]
 
         __claim = convert_to_wikibase_datatype(__value, __propcode, __data_type)
         item.claims.add(__claim)
-        
-
-
 
     print_log("Creating mapping for {}".format(file_name))
     # Read .csv file to create mappings
