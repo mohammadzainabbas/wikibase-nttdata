@@ -3,6 +3,7 @@
 Task Start date,time,Starting date of SEMBU task,task start time;start date of work;starting date of given task;task's starting time
 Task End date,time,Ending date of SEMBU task,task end time;end date of work;ending date of given task;task's ending time
 part_of,string,Task is part of a given project,task_of;task of
+assigned to,wikibase-item,Task is assigned to a SEMBU team member,task_of;task of
 
 
 Client,string,Organization,Organization
