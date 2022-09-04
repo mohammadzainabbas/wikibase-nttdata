@@ -33,7 +33,7 @@ def setup_config():
     wbi_config['SPARQL_ENDPOINT_URL'] = '"http://139.144.66.193:8282/proxy/wdqs/bigdata/namespace/wdq/sparql"'
     wbi_config['WIKIBASE_URL'] = 'http://wikibase.svc'
 
-def create_mapping(file_name: PathLike, wbi: WikibaseIntegrator) -> list:
+def create_organization(data: dict, mapping: list, wbi: WikibaseIntegrator) -> list:
     """
     Create mapping for all columns
     """
