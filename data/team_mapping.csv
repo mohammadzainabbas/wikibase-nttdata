@@ -1,9 +1,9 @@
 ﻿column,prop_type,type
-Id,P
-Name,P
-Family Name,P
-Birthdate,P
-Nationality,P
-Category,P
-Start date,P
-End date,P
+Id,P,num
+Name,P,str
+Family Name,P,str
+Birthdate,P,date
+Nationality,P,str
+Category,P,str
+Start date,P,date
+End date,P,date
