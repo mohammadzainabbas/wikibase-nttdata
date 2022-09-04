@@ -1,0 +1,19 @@
+column,prop
+Id,P1
+Name,P2
+Family Name,P3
+Birthdate,P4
+Nationality,P5
+Category,P6
+Start date,P7
+End date,P8
+Client Type,P9
+Client,P10
+Project,P11
+Project Type,P12
+Task,P13
+Owner,P14
+Member,P15
+Duration (in days),P16
+Project Start date,P17
+Project End date,P18
