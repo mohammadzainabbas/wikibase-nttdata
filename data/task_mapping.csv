@@ -3,7 +3,7 @@
 Task Start date,time,Starting date of SEMBU task,task start time;start date of work;starting date of given task;task's starting time
 Task End date,time,Ending date of SEMBU task,task end time;end date of work;ending date of given task;task's ending time
 
-part_of,time
+part_of,start
 
 Client Type,string,Organization type,Organization Type
 Client,string,Organization,Organization
