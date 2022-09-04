@@ -74,7 +74,7 @@ def convert_to_wikibase_datatype(__value, __propcode, __data_type):
     else:
         print_error("Invalid data type for property: '{}'".format(__propcode))
 
-def create_organization(data: dict, mapping: list, wbi: WikibaseIntegrator) -> None:
+def create_organization(data: dict, mapping: list, wbi: WikibaseIntegrator) -> dict:
     """
     Create mapping for all columns
     """
@@ -103,7 +103,8 @@ def create_organization(data: dict, mapping: list, wbi: WikibaseIntegrator) -> N
     print_log("Creating item for '{}'".format(__key))
 
     try:
-        item.write()
+        res = item.write()
+
     except ModificationFailed as e:
         print_error("Unable to create item for '{}'".format(__key))
         print_error(e)
