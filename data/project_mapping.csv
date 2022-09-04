@@ -1,6 +1,7 @@
 ﻿column,data_type,description,alias
 ProjectName,string,Name of the SEMBU Project,Project name;project name;name of the project
-part of,string,Task is part of a given project,task_of;task of
+part of,string,Project is part of a given organization,part of
+
 
 Project Type,string,Type of Project,Project type
 Task,wikibase-item,Name of the main task,Project Title
