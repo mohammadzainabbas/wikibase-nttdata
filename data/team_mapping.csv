@@ -1,5 +1,5 @@
 ﻿column,data_type,type,mapping_code
-Id,num,internal,
+Id,wikibase-entityid,internal,
 Name,str,external,P735
 Family Name,str,external,P734
 Birthdate,date,external,P569
