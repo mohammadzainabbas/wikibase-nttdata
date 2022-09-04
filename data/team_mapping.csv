@@ -1,7 +1,7 @@
 ﻿column,data_type,type,mapping_code,description,alias
 Id,string,internal,,Unique identifier for a SEMBU team member,ID
-Name,external-id,external,P735,First name/given name of SEMBU team member
-Family Name,external-id,external,P734,Surname/Family name of SEMBU team member
+Name,external-id,external,P735,First name/given name of SEMBU team member,First name
+Family Name,external-id,external,P734,Surname/Family name of SEMBU team member,Last name
 Birthdate,external-id,external,P569,Date of birth
 Nationality,external-id,external,P27,Nationality of SEMBU team member
 Category,wikibase-item,internal,,Category in which SEMBU team member's expertise lies
