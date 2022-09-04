@@ -8,4 +8,4 @@ Start date,string,Joining date of SEMBU team member,Start time;start date;starti
 End date,string,Ending date of SEMBU team member,End time;end date;ending date;ending time
 
 Category,wikibase-item,Category in which SEMBU team member's expertise lies,Knows about;expert in
-Task,wikibase-item,Task given to SEMBU team member during a given project,Knows about;expert in
+Task,wikibase-item,Task given to SEMBU team member during a given project,task;work
