@@ -2,8 +2,8 @@
 Id,num,internal,
 Name,str,external,P735
 Family Name,str,external,P734
-Birthdate,date,external,P
-Nationality,str,external,P
+Birthdate,date,external,P569
+Nationality,str,external,P27
 Category,str,internal,
 Start date,date,external,P
 End date,date,external,P
