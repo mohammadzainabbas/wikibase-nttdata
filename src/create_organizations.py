@@ -110,12 +110,10 @@ def create_organization(data: dict, mapping: list, wbi: WikibaseIntegrator) -> d
         ident = [x for x in str(res).split('\n') if "_id='P" in x]
         if len(ident) == 1:
             prop_code = ident[0].split("'")[1]
-            __mapping.append(dict({ "column": __col_name, "prop": prop_code, "data_type": __data_type }))
-            print_log("Column '{}' is mapped to '{}'".format(__col_name, prop_code))
+            __res["prop"] = prop_code
+            print_log("Key '{}' is mapped to '{}'".format(__key, prop_code))
         else:
             raise Exception("Surprise, this method didn't work.")
-    
-
     except ModificationFailed as e:
         print_error("Unable to create item for '{}'".format(__key))
         print_error(e)
