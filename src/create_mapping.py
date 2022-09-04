@@ -72,8 +72,8 @@ def main():
     setup_config()
 
     # Default variables
-    # WDUSER, WDPASS = "Admin", "90J8XXXaO4Sr9^^Z"
-    WDUSER, WDPASS = "Mohammadzainabbas", "fHh!%shFa6^h"
+    WDUSER, WDPASS = "Admin", "90J8XXXaO4Sr9^^Z"
+    # WDUSER, WDPASS = "Mohammadzainabbas", "fHh!%shFa6^h"
 
     parent_dir = abspath(join(getcwd(), pardir))
     data_dir = join(parent_dir, "data")
