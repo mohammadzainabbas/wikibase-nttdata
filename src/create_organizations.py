@@ -140,6 +140,7 @@ def main() -> None:
     project_data = join(data_dir, "BDMA_Projects_v1.csv")
     column_mapping_data = join(data_dir, "column_mapping.csv")
     
+    
     df = pd.read_csv(column_mapping_data)
     column_mapping = df.set_index("column").T.to_dict()
 
@@ -148,6 +149,9 @@ def main() -> None:
     __data = __df.set_index("Client").T.to_dict()
 
     __res = list()
+
+
+
     if isinstance(__data, dict):
         # only one item
         __res.append(create_organization(__data, column_mapping, wbi))
