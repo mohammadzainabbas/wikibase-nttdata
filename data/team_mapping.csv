@@ -1,5 +1,5 @@
-﻿column,prop_type,type
-Id,num,external
+﻿column,prop_type,type,code
+Id,num,internal
 Name,str,external
 Family Name,str,external
 Birthdate,date,external
