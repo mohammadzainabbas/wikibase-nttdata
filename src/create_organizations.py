@@ -88,7 +88,12 @@ def main() -> None:
 
     parent_dir = abspath(join(getcwd(), pardir))
     data_dir = join(parent_dir, "data")
+    column_mapping_data = join(data_dir, "column_mapping.csv")
     
+    df = pd.read_csv(column_mapping_data)
+    column_mapping = df.set_index("column").T.to_dict()
+    
+
     # Create login and WikibaseIntegrator object
     login = wbi_login.Login(user=WDUSER, password=WDPASS)
     wbi = WikibaseIntegrator(login=login)
