@@ -40,6 +40,8 @@ def create_organization(data: dict, mapping: list, wbi: WikibaseIntegrator) -> N
     __key = list(data.keys())[0]
     __props = list(data[__key].keys())
 
+    item = wbi.item.new()
+
     for prop in __props:
         if prop not in mapping:
             print_error("Unable to find mapping for {}".format(prop))
@@ -51,7 +53,7 @@ def create_organization(data: dict, mapping: list, wbi: WikibaseIntegrator) -> N
         __data_type = __mapping["data_type"]
         __propcode = __mapping["prop"]
 
-        
+
 
     print_log("Creating mapping for {}".format(file_name))
     # Read .csv file to create mappings
