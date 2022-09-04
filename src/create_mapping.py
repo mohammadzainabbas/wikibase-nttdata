@@ -83,6 +83,8 @@ def main():
     login = wbi_login.Login(user=WDUSER, password=WDPASS)
     wbi = WikibaseIntegrator(login=login)
 
+    __mapping = list()
+
     create_mapping(team_mapping, wbi)
     create_mapping(project_mapping, wbi)
 
