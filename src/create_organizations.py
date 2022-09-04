@@ -106,7 +106,7 @@ def create_organization(data: dict, mapping: list, wbi: WikibaseIntegrator) -> d
 
     try:
         res = item.write()
-        ident = [x for x in str(res).split('\n') if "_id='P" in x]
+        ident = [x for x in str(res).split('\n') if "_id='Q" in x]
         if len(ident) == 1:
             prop_code = ident[0].split("'")[1]
             __res["prop"] = prop_code
