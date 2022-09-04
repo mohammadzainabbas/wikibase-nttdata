@@ -102,42 +102,11 @@ def create_organization(data: dict, mapping: list, wbi: WikibaseIntegrator) -> N
     
     print_log("Creating item for '{}'".format(__key))
 
-    print_log("Creating mapping for {}".format(file_name))
-    # Read .csv file to create mappings
-    __df = pd.read_csv(join(file_name))
-    
-    if __df.empty: return list()
-
-    columns_with_mappings = list(__df.T.to_dict().values())
-    __mapping = list()
-
-    for item in columns_with_mappings:
-        __col_name = item['column']
-        __data_type = item['data_type']
-        __description = item['description']
-        __alias = item['alias'].split(";")
-
-        try:
-
-            p = wbi.property.new(datatype=__data_type)
-            p.labels.set('en', __col_name)
-            p.descriptions.set('en', __description)
-            p.aliases.set('en', __alias)
-
-            res = p.write()
-
-            ident = [x for x in str(res).split('\n') if "_id='P" in x]
-            if len(ident) == 1:
-                prop_code = ident[0].split("'")[1]
-                __mapping.append(dict({ "column": __col_name, "prop": prop_code, "data_type": __data_type }))
-                print_log("Column '{}' is mapped to '{}'".format(__col_name, prop_code))
-            else:
-                raise Exception("Surprise, this method didn't work.")
-        
-        except ModificationFailed as e:
-            print_error("Property '{}' already exists".format(__col_name))
-            continue
-    return __mapping
+    try:
+        item.write()
+    except ModificationFailed as e:
+        print_error("Unable to create item for '{}'".format(__key))
+        print_error(e)
 
 def main() -> None:
     """
