@@ -1,0 +1,11 @@
+column,data_type,type,mapping_code,description,alias
+Client Type,string,internal,,Organization type,Organization Type
+Client,string,internal,,Organization,Organization
+Project,string,internal,,Name of the SEMBU Project,Project name
+Project Type,string,internal,,Type of Project,Project type
+Task,wikibase-item,internal,,Name of the main task,Project Title
+Owner,string,internal,,Name of the Project Owner,Project Owner
+Member,string,internal,,Name of the Project Member,Project Member
+Duration (in days),time,internal,,Duration of the project,Project Duration
+Task Start date,external-id,external,P580,Starting date of SEMBU task,Start time
+Task End date,external-id,external,P582,Ending date of SEMBU task,End time
