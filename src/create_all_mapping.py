@@ -36,8 +36,6 @@ def create_mapping(file_name: PathLike, wbi: WikibaseIntegrator) -> list:
     for item in columns_with_mappings:
         __col_name = item['column']
         __data_type = item['data_type']
-        __type = item['type']
-        __mapping_code = item['mapping_code']
         __description = item['description']
         __alias = item['alias'].split(";")
 
@@ -53,7 +51,7 @@ def create_mapping(file_name: PathLike, wbi: WikibaseIntegrator) -> list:
             ident = [x for x in str(res).split('\n') if "_id='P" in x]
             if len(ident) == 1:
                 prop_code = ident[0].split("'")[1]
-                __mapping.append(dict({ "column": __col_name, "prop": prop_code, "data_type": __data_type, "type": __type, "mapping_code": __mapping_code }))
+                __mapping.append(dict({ "column": __col_name, "prop": prop_code, "data_type": __data_type }))
                 print("Column '{}' is mapped to '{}'".format(__col_name, prop_code))
             else:
                 raise Exception("Surprise, this method didn't work.")
