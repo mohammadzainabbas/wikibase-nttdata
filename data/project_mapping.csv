@@ -3,7 +3,7 @@ Client Type,string,internal,,Organization type,Organization Type
 Client,string,internal,,Organization,Organization
 Project,string,internal,,Name of the SEMBU Project,Project name
 Project Type,string,internal,,Type of Project,Project type
-Task,string,internal,,Name of the main task,Project Title
+Task,wikibase-item,internal,,Name of the main task,Project Title
 Owner,string,internal,,Name of the Project Owner,Project Owner
 Member,string,internal,,Name of the Project Member,Project Member
 Duration (in days),time,internal,,Duration of the project,Project Duration
