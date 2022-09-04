@@ -86,7 +86,7 @@ def main() -> None:
         __mapping.extend(create_mapping(join(data_dir, file), wbi))
 
     #save mapping to .csv file   
-    pd.DataFrame(list(__team_mapping + __project_mapping)).to_csv(join(data_dir, "column_mapping.csv"), index=False)
+    pd.DataFrame(__mapping).to_csv(join(data_dir, "column_mapping.csv"), index=False)
 
 if __name__ == "__main__":
     main()
