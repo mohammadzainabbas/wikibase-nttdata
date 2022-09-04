@@ -19,6 +19,12 @@ def print_log(text: str) -> None:
     """
     print("[ log ] {}".format(text))
 
+def print_error(text: str) -> None:
+    """
+    Print error
+    """
+    print("[ error ] {}".format(text))
+
 def setup_config():
     """
     Set up WBI config to use local docker installation
@@ -63,7 +69,7 @@ def create_mapping(file_name: PathLike, wbi: WikibaseIntegrator) -> list:
                 raise Exception("Surprise, this method didn't work.")
         
         except ModificationFailed as e:
-            print_log("Property '{}' already exists".format(__col_name))
+            print_error("Property '{}' already exists".format(__col_name))
             continue
     return __mapping
 
