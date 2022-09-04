@@ -150,10 +150,10 @@ def main() -> None:
     __res = []
     if isinstance(__data, dict):
         # only one item
-        create_organization(__data, column_mapping, wbi)
+        __res.append(create_organization(__data, column_mapping, wbi))
     elif isinstance(__data, list):
         for item in __data:
-            create_organization(item, column_mapping, wbi)
+            __res.append(create_organization(item, column_mapping, wbi))
     else:
         print_error("Unexpected data type")
 
