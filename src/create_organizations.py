@@ -145,17 +145,6 @@ def main() -> None:
     else:
         print_error("Unexpected data type")
 
-
-
-
-
-
-
-    mapping_files = ['team_member_mapping.csv', 'project_mapping.csv', 'organization_mapping.csv', 'task_mapping.csv']
-    __mapping = list()
-    for file in mapping_files:
-        __mapping.extend(create_mapping(join(data_dir, file), wbi))
-
     #save mapping to .csv file   
     pd.DataFrame(__mapping).to_csv(join(data_dir, "column_mapping.csv"), index=False)
 
