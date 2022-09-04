@@ -1,0 +1,5 @@
+.ipynb_checkpoints
+
+# Ignore auto-update scripts
+commit.sh
+update_git.py
