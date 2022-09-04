@@ -139,7 +139,7 @@ def main() -> None:
     data_dir = join(parent_dir, "data")
     project_data = join(data_dir, "BDMA_Projects_v1.csv")
     column_mapping_data = join(data_dir, "column_mapping.csv")
-    
+    items_data = join(data_dir, "items.csv")
     
     df = pd.read_csv(column_mapping_data)
     column_mapping = df.set_index("column").T.to_dict()
