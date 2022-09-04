@@ -41,6 +41,9 @@ def create_organization(data: dict, mapping: list, wbi: WikibaseIntegrator) -> N
     __props = list(data[__key].keys())
 
     item = wbi.item.new()
+    item.set_label(__key, lang="en")
+    item.set_description("Organization", lang="en")
+    
 
     for prop in __props:
         if prop not in mapping:
