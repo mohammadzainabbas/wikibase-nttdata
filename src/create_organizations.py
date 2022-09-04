@@ -37,39 +37,39 @@ def convert_to_wikibase_datatype(__value, __propcode, __data_type):
     """
     Convert and return Wikibase datatype
     """
-    if __data_type == WikibaseDatatype.STRING:
+    if __data_type == WikibaseDatatype.STRING.value.value:
         return String(value=__value, prop_nr=__propcode)
-    elif (__data_type == "item") or (__data_type == WikibaseDatatype.ITEM):
+    elif (__data_type == "item") or (__data_type == WikibaseDatatype.ITEM.value):
         return Item(value=__value, prop_nr=__propcode)
-    elif __data_type == WikibaseDatatype.QUANTITY:
+    elif __data_type == WikibaseDatatype.QUANTITY.value:
         return Quantity(value=__value, prop_nr=__propcode)
-    elif __data_type == WikibaseDatatype.TIME:
+    elif __data_type == WikibaseDatatype.TIME.value:
         return Time(value=__value, prop_nr=__propcode)
-    elif __data_type == WikibaseDatatype.URL:
+    elif __data_type == WikibaseDatatype.URL.value:
         return URL(value=__value, prop_nr=__propcode)
-    elif __data_type == WikibaseDatatype.COMMONSMEDIA:
+    elif __data_type == WikibaseDatatype.COMMONSMEDIA.value:
         return CommonsMedia(value=__value, prop_nr=__propcode)
-    elif (__data_type == "externalId") or (__data_type == WikibaseDatatype.EXTERNALID):
+    elif (__data_type == "externalId") or (__data_type == WikibaseDatatype.EXTERNALID.value):
         return ExternalID(value=__value, prop_nr=__propcode)
-    elif (__data_type == "form") or (__data_type == WikibaseDatatype.FORM):
+    elif (__data_type == "form") or (__data_type == WikibaseDatatype.FORM.value):
         return Form(value=__value, prop_nr=__propcode)
-    elif (__data_type == "geoShape") or (__data_type == WikibaseDatatype.GEOSHAPE):
+    elif (__data_type == "geoShape") or (__data_type == WikibaseDatatype.GEOSHAPE.value):
         return GeoShape(value=__value, prop_nr=__propcode)
-    elif (__data_type == "globeCoordinate") or (__data_type == WikibaseDatatype.GLOBECOORDINATE):
+    elif (__data_type == "globeCoordinate") or (__data_type == WikibaseDatatype.GLOBECOORDINATE.value):
         return GlobeCoordinate(value=__value, prop_nr=__propcode)
-    elif (__data_type == "lexeme") or (__data_type == WikibaseDatatype.LEXEME):
+    elif (__data_type == "lexeme") or (__data_type == WikibaseDatatype.LEXEME.value):
         return Lexeme(value=__value, prop_nr=__propcode)
-    elif __data_type == WikibaseDatatype.MATH:
+    elif __data_type == WikibaseDatatype.MATH.value:
         return Math(value=__value, prop_nr=__propcode)
-    elif (__data_type == "monolingualText") or (__data_type == WikibaseDatatype.MONOLINGUALTEXT):
+    elif (__data_type == "monolingualText") or (__data_type == WikibaseDatatype.MONOLINGUALTEXT.value):
         return MonolingualText(value=__value, prop_nr=__propcode)
-    elif (__data_type == "musicalNotation") or (__data_type == WikibaseDatatype.MUSICALNOTATION):
+    elif (__data_type == "musicalNotation") or (__data_type == WikibaseDatatype.MUSICALNOTATION.value):
         return MusicalNotation(value=__value, prop_nr=__propcode)
-    elif (__data_type == "property") or (__data_type == WikibaseDatatype.PROPERTY):
+    elif (__data_type == "property") or (__data_type == WikibaseDatatype.PROPERTY.value):
         return Property(value=__value, prop_nr=__propcode)
-    elif (__data_type == "sense") or (__data_type == WikibaseDatatype.SENSE):
+    elif (__data_type == "sense") or (__data_type == WikibaseDatatype.SENSE.value):
         return Sense(value=__value, prop_nr=__propcode)
-    elif (__data_type == "tabularData") or (__data_type == WikibaseDatatype.TABULARDATA):
+    elif (__data_type == "tabularData") or (__data_type == WikibaseDatatype.TABULARDATA.value):
         return TabularData(value=__value, prop_nr=__propcode)
     else:
         print_error("Invalid data type for property: '{}'".format(__propcode))
