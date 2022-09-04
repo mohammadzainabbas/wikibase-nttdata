@@ -102,6 +102,9 @@ def main() -> None:
     __df = pd.read_csv(project_data, usecols=__columns).drop_duplicates()
     __data = __df.set_index("Client").T.to_dict()
 
+    if isinstance(__data, dict):
+        __data = 
+
 
 
 
