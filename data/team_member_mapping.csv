@@ -1,7 +1,7 @@
 ﻿column,data_type,description,alias
 Id,string,Unique identifier for a SEMBU team member,ID
 Name,string,First name/given name of SEMBU team member,First name
-Family Name,string,Surname/Family name of SEMBU team member,Last name
+Family Name,string,Surname/Family name of SEMBU team member,Last name;Surname;family name
 Birthdate,time,Date of birth,DOB
 Nationality,string,Nationality of SEMBU team member,Citizenship
 Category,wikibase-item,Category in which SEMBU team member's expertise lies,Knows about
