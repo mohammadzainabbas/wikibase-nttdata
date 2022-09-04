@@ -20,7 +20,7 @@ def setup_config():
     wbi_config['SPARQL_ENDPOINT_URL'] = '"http://139.144.66.193:8282/proxy/wdqs/bigdata/namespace/wdq/sparql"'
     wbi_config['WIKIBASE_URL'] = 'http://wikibase.svc'
 
-def create_mapping(file_name):
+def create_mapping(file_name, wbi):
     """
     Create mapping for all columns
     """
@@ -82,7 +82,6 @@ def main():
 
     create_mapping(team_mapping, wbi)
     create_mapping(project_mapping, wbi)
-
 
 if __name__ == "__main__":
     main()
