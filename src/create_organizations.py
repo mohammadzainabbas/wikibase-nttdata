@@ -51,7 +51,7 @@ def convert_to_wikibase_datatype(__value, __propcode, data_type):
         return CommonsMedia(value=__value, prop_nr=__propcode)
     elif (__data_type == "externalId") or (__data_type == WikibaseDatatype.EXTERNALID):
         return ExternalID(value=__value, prop_nr=__propcode)
-    elif __data_type == "form":
+    elif (__data_type == "form") or (__data_type == WikibaseDatatype.FORM):
         return Form(value=__value, prop_nr=__propcode)
     elif __data_type == "geoShape":
         return GeoShape(value=__value, prop_nr=__propcode)
