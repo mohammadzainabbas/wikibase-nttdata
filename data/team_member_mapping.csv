@@ -1,4 +1,4 @@
-﻿column,data_type,type,mapping_code,description,alias
+﻿column,data_type,description,alias
 Id,string,internal,,Unique identifier for a SEMBU team member,ID
 Name,string,internal,,First name/given name of SEMBU team member,First name
 Family Name,string,internal,,Surname/Family name of SEMBU team member,Last name
