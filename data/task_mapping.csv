@@ -1,6 +1,6 @@
 ﻿column,data_type,description,alias
 
-Task Start date,time,Starting date of SEMBU task,Start time
+Task Start date,time,Starting date of SEMBU task,task start time;start date of task;starting date;starting time
 Task End date,time,Ending date of SEMBU task,End time
 
 Client Type,string,Organization type,Organization Type
