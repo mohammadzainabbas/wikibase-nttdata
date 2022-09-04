@@ -1,3 +1,4 @@
 ﻿column,data_type,description,alias
+Project Type,string,Tells the type of project,type of project;project type
 part of,string,Project is part of a given organization,part of;project of;project_of
 owner,wikibase-item,Project owner,supervised by;owned_by
