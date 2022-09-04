@@ -53,7 +53,7 @@ def create_mapping(file_name, wbi):
             ident = [x for x in str(res).split('\n') if "_id='P" in x]
             if len(ident) == 1:
                 prop_code = ident[0].split("'")[1]
-                __mapping.append(dict({ "column": __col_name, "prop": prop_code }))
+                __mapping.append(dict({ "column": __col_name, "prop": prop_code, "data_type": __data_type, "type": __type, "mapping_code": __mapping_code }))
                 print("Column '{}' is mapped to '{}'".format(__col_name, prop_code))
             else:
                 raise Exception("Surprise, this method didn't work.")
