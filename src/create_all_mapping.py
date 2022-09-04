@@ -37,6 +37,7 @@ def create_mapping(file_name: PathLike, wbi: WikibaseIntegrator) -> list:
     """
     Create mapping for all columns
     """
+    print_log("Creating mapping for {}".format(file_name))
     # Read .csv file to create mappings
     __df = pd.read_csv(join(file_name))
     
