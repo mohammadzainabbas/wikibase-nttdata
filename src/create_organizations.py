@@ -57,15 +57,15 @@ def convert_to_wikibase_datatype(__value, __propcode, data_type):
         return GeoShape(value=__value, prop_nr=__propcode)
     elif (__data_type == "globeCoordinate") or (__data_type == WikibaseDatatype.GLOBECOORDINATE):
         return GlobeCoordinate(value=__value, prop_nr=__propcode)
-    elif __data_type == "lexeme":
+    elif (__data_type == "lexeme") or (__data_type == WikibaseDatatype.LEXEME):
         return Lexeme(value=__value, prop_nr=__propcode)
-    elif __data_type == "math":
+    elif __data_type == WikibaseDatatype.MATH:
         return Math(value=__value, prop_nr=__propcode)
-    elif __data_type == "monolingualText":
+    elif (__data_type == "monolingualText") or (__data_type == WikibaseDatatype.MONOLINGUALTEXT):
         return MonolingualText(value=__value, prop_nr=__propcode)
-    elif __data_type == "musicalNotation":
+    elif (__data_type == "musicalNotation") or (__data_type == WikibaseDatatype.MUSICALNOTATION):
         return MusicalNotation(value=__value, prop_nr=__propcode)
-    elif __data_type == "property":
+    elif __data_type == WikibaseDatatype.PROPERTY:
         return Property(value=__value, prop_nr=__propcode)
     elif __data_type == "sense":
         return Sense(value=__value, prop_nr=__propcode)
