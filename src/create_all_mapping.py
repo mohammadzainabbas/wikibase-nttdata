@@ -83,12 +83,7 @@ def main() -> None:
     mapping_files = ['team_member_mapping.csv', 'project_mapping.csv', 'organization_mapping.csv', 'task_mapping.csv']
     __mapping = list()
     for file in mapping_files:
-        project_mapping = join(data_dir, file)
-
-
-
-    __team_mapping = create_mapping(team_mapping, wbi)
-    __project_mapping = create_mapping(project_mapping, wbi)
+        __mapping.extend(create_mapping(join(data_dir, file), wbi))
 
     #save mapping to .csv file   
     pd.DataFrame(list(__team_mapping + __project_mapping)).to_csv(join(data_dir, "column_mapping.csv"), index=False)
