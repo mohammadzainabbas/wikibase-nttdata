@@ -88,6 +88,9 @@ def main():
 
     __mapping = __team_mapping + __project_mapping
 
+    with open(join(data_dir, "column_mapping.txt")):
+        
+
 
 if __name__ == "__main__":
     main()
