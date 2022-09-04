@@ -11,6 +11,7 @@ import pandas as pd
 from wikibaseintegrator.datatypes import (URL, CommonsMedia, ExternalID, Form, GeoShape, GlobeCoordinate, Item, Lexeme, Math, MonolingualText, MusicalNotation, Property, Quantity, Sense, String, TabularData, Time)
 from wikibaseintegrator.wbi_enums import ActionIfExists, WikibaseDatePrecision, WikibaseRank, WikibaseSnakType
 from wikibaseintegrator.wbi_exceptions import MissingEntityException, ModificationFailed, MWApiError
+import pickle
 
 def setup_config():
     """
