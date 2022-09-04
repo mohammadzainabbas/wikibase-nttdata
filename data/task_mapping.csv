@@ -3,9 +3,8 @@
 Task Start date,time,Starting date of SEMBU task,task start time;start date of work;starting date of given task;task's starting time
 Task End date,time,Ending date of SEMBU task,task end time;end date of work;ending date of given task;task's ending time
 
-part_of,start
+part_of,string,Task is part of a given project,Organization Type
 
-Client Type,string,Organization type,Organization Type
 Client,string,Organization,Organization
 Project,string,Name of the SEMBU Project,Project name
 Project Type,string,Type of Project,Project type
