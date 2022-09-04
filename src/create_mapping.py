@@ -30,6 +30,7 @@ def create_mapping(file_name, wbi):
     if __df.empty: return
 
     columns_with_mappings = list(__df.T.to_dict().values())
+    __mapping = list()
 
     for item in columns_with_mappings:
         __col_name = item['column']
