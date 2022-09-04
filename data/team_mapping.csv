@@ -1,7 +1,7 @@
 ﻿column,prop_type,type,mapping_code
 Id,num,internal,
-Name,str,external
-Family Name,str,external
+Name,str,external,P735
+Family Name,str,external,P734
 Birthdate,date,external
 Nationality,str,external
 Category,str,internal
