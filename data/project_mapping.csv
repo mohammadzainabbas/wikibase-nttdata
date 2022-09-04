@@ -7,3 +7,15 @@ Nationality,external-id,external,P27,Nationality of SEMBU team member,Citizenshi
 Category,wikibase-item,internal,,Category in which SEMBU team member's expertise lies,Knows about
 Start date,external-id,external,P580,Joining date of SEMBU team member,Start time
 End date,external-id,external,P582,Ending date of SEMBU team member,End time
+
+
+Client Type,string,internal,,Organization type,Organization Type
+Client,string,internal,,Organization,Organization
+Project,string,internal,,Name of the SEMBU Project,Project name
+Project Type
+Task
+Owner
+Member
+Duration (in days)
+Start date
+End date
