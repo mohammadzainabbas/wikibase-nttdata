@@ -71,7 +71,7 @@ def main():
     WDUSER, WDPASS = "Admin", "90J8XXXaO4Sr9^^Z"
     # WDUSER, WDPASS = "Mohammadzainabbas", "fHh!%shFa6^h"
 
-    parent_dir = abspath(join(getcwd(), pardir))
+    parent_dir = join(getcwd(), pardir)
     data_dir = join(parent_dir, "data")
     team_mapping = join(data_dir, "team_mapping.csv")
     project_mapping = join(data_dir, "project_mapping.csv")
