@@ -38,7 +38,7 @@ def create_organization(data: dict, mapping: list, wbi: WikibaseIntegrator) -> N
     Create mapping for all columns
     """
     __key = list(data.keys())[0]
-    __props = data[__key]
+    __props = list(data[__key].keys())
 
     for 
 
