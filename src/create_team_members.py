@@ -50,6 +50,7 @@ def convert_to_wikibase_datatype(__value, __propcode, __data_type, __res, wbi):
     elif __data_type == WikibaseDatatype.QUANTITY.value:
         return Quantity(value=__value, prop_nr=__propcode)
     elif __data_type == WikibaseDatatype.TIME.value:
+        # change format to 
         return Time(time=__value, precision=WikibaseDatePrecision.DAY, prop_nr=__propcode)
     elif __data_type == WikibaseDatatype.URL.value:
         return URL(value=__value, prop_nr=__propcode)
