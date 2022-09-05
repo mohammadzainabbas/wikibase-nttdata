@@ -75,7 +75,7 @@ def convert_to_wikibase_datatype(__value, __propcode, __data_type):
     else:
         print_error("Invalid data type for property: '{}'".format(__propcode))
 
-def create_project(data: dict, mapping: list, wbi: WikibaseIntegrator) -> dict:
+def create_project(data: dict, mapping: list, wbi: WikibaseIntegrator, res: list) -> dict:
     """
     Create mapping for all columns
     """
@@ -100,7 +100,7 @@ def create_project(data: dict, mapping: list, wbi: WikibaseIntegrator) -> dict:
         __propcode = __mapping["prop"]
         __data_type = __mapping["data_type"]
 
-        __claim = convert_to_wikibase_datatype(__value, __propcode, __data_type)
+        __claim = convert_to_wikibase_datatype(__value, __propcode, __data_type, res)
         item.claims.add(__claim)
     
     print_log("Creating item for '{}'".format(__key))
