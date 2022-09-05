@@ -33,7 +33,7 @@ def setup_config():
     wbi_config['SPARQL_ENDPOINT_URL'] = '"http://139.144.66.193:8282/proxy/wdqs/bigdata/namespace/wdq/sparql"'
     wbi_config['WIKIBASE_URL'] = 'http://wikibase.svc'
 
-def convert_to_wikibase_datatype(__value, __propcode, __data_type, __res):
+def convert_to_wikibase_datatype(__value, __propcode, __data_type, __res, wbi):
     """
     Convert and return Wikibase datatype
     """
@@ -46,7 +46,7 @@ def convert_to_wikibase_datatype(__value, __propcode, __data_type, __res):
             print_error("Unable to find: '{}' item".format(__value))
             return None
         else:
-            return Item(value=__value, prop_nr=prop_code)
+            return wbi.item.get(prop_code)
     elif __data_type == WikibaseDatatype.QUANTITY.value:
         return Quantity(value=__value, prop_nr=__propcode)
     elif __data_type == WikibaseDatatype.TIME.value:
