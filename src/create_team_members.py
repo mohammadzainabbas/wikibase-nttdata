@@ -90,7 +90,7 @@ def create_team_member(data: dict, mapping: list, wbi: WikibaseIntegrator, res: 
     item = wbi.item.new()
     item.labels.set("en", __key)
     item.aliases.set("en", __key)
-    item.descriptions.set("en", "An project named {}".format(__key))
+    item.descriptions.set("en", "A team member named {}".format(__key))
 
     __res = dict({ "item": __key })
 
