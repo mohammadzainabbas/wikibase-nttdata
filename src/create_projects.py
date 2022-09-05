@@ -43,7 +43,7 @@ def convert_to_wikibase_datatype(__value, __propcode, __data_type, __res):
         prop_code = pd.DataFrame(__res).set_index("item").T.to_dict()[__value]
         if not prop_code:
             print_error("Unable to find: '{}' item".format(__value))
-            return Item()
+            return None
         else:
             return Item(value=__value, prop_nr=prop_code)
     elif __data_type == WikibaseDatatype.QUANTITY.value:
