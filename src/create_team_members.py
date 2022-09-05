@@ -150,7 +150,8 @@ def main() -> None:
     df = pd.read_csv(column_mapping_data)
     column_mapping = df.set_index("column").T.to_dict()
     
-    __columns = ["Id", "Name", "Family Name", "Birthdate", "Nationality", "Category", "Start date", "End date"]
+    __columns = ["Id", "Name", "Family Name", "Birthdate", "Nationality", "Start date", "End date"]
+    # __columns = ["Id", "Name", "Family Name", "Birthdate", "Nationality", "Category", "Task", "Start date", "End date"]
     __df = pd.read_csv(team_data, usecols=__columns).drop_duplicates()
     __df["full_name"] = __df["Name"] + " " + __df["Family Name"]
     __data = __df.set_index("full_name").T.to_dict()
