@@ -53,6 +53,7 @@ def convert_to_wikibase_datatype(__value, __propcode, __data_type, __res, wbi):
     elif __data_type == WikibaseDatatype.TIME.value:
         # change format to '+%Y-%m-%dT00:00:00Z'
         __date = datetime.strptime(__value, '%d/%m/%Y').strftime('%Y-%m-%dT00:00:00Z')
+        if 
         return Time(time=__date, precision=WikibaseDatePrecision.DAY, prop_nr=__propcode)
     elif __data_type == WikibaseDatatype.URL.value:
         return URL(value=__value, prop_nr=__propcode)
