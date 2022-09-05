@@ -162,8 +162,9 @@ def main() -> None:
         __res = __df.to_dict(orient="records")
 
     if isinstance(__data, dict):
-        # only one item
-        __res.append(create_team_member(__data, column_mapping, wbi, __res))
+        __keys = list(__data.keys())
+        for __key in __keys:
+            __res.append(create_team_member(__data[__key], column_mapping, wbi, __res))
     elif isinstance(__data, list):
         for item in __data:
             __res.append(create_team_member(item, column_mapping, wbi, __res))
