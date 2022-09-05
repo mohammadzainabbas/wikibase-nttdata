@@ -105,7 +105,7 @@ def create_project(data: dict, mapping: list, wbi: WikibaseIntegrator, res: list
         __propcode = __mapping["prop"]
         __data_type = __mapping["data_type"]
 
-        __claim = convert_to_wikibase_datatype(__value, __propcode, __data_type, res)
+        __claim = convert_to_wikibase_datatype(__value, __propcode, __data_type, res, wbi)
         item.claims.add(__claim)
     
     print_log("Creating item for '{}'".format(__key))
