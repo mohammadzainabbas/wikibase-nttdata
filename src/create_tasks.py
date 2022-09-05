@@ -80,7 +80,7 @@ def convert_to_wikibase_datatype(__value, __propcode, __data_type, __res, wbi):
     else:
         print_error("Invalid data type for property: '{}'".format(__propcode))
 
-def create_project(data: dict, mapping: list, wbi: WikibaseIntegrator, res: list) -> dict:
+def create_tasks(data: dict, mapping: list, wbi: WikibaseIntegrator, res: list) -> dict:
     """
     Create mapping for all columns
     """
@@ -158,10 +158,10 @@ def main() -> None:
 
     if isinstance(__data, dict):
         # only one item
-        __res.append(create_project(__data, column_mapping, wbi, __res))
+        __res.append(create_tasks(__data, column_mapping, wbi, __res))
     elif isinstance(__data, list):
         for item in __data:
-            __res.append(create_project(item, column_mapping, wbi, __res))
+            __res.append(create_tasks(item, column_mapping, wbi, __res))
     else:
         print_error("Unexpected data type")
 
