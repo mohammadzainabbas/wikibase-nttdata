@@ -2,3 +2,7 @@ SELECT (COUNT(?s) AS ?count) WHERE {
   ?s ?p ?o
 }
 
+SELECT ?s ?p ?o WHERE {
+  ?s ?p ?o
+}
+
