@@ -40,6 +40,7 @@ def convert_to_wikibase_datatype(__value, __propcode, __data_type):
     if __data_type == WikibaseDatatype.STRING.value:
         return String(value=__value, prop_nr=__propcode)
     elif (__data_type == "item") or (__data_type == WikibaseDatatype.ITEM.value):
+
         return Item(value=__value, prop_nr=__propcode)
     elif __data_type == WikibaseDatatype.QUANTITY.value:
         return Quantity(value=__value, prop_nr=__propcode)
@@ -151,10 +152,10 @@ def main() -> None:
 
     if isinstance(__data, dict):
         # only one item
-        __res.append(create_project(__data, column_mapping, wbi))
+        __res.append(create_project(__data, column_mapping, wbi, __res))
     elif isinstance(__data, list):
         for item in __data:
-            __res.append(create_project(item, column_mapping, wbi))
+            __res.append(create_project(item, column_mapping, wbi, __res))
     else:
         print_error("Unexpected data type")
 
