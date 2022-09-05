@@ -145,9 +145,8 @@ def main() -> None:
     
     df = pd.read_csv(column_mapping_data)
     column_mapping = df.set_index("column").T.to_dict()
-
-    # __columns = ["Project", "Project Type", "Client", "Owner"]
-    __columns = ["Project", "Project Type", "Client"]
+    
+    __columns = ["Id", "Name", "Family Name", "Birthdate", "Nationality", "Category", "Start date", "End date"]
     __df = pd.read_csv(project_data, usecols=__columns).drop_duplicates()
     __data = __df.set_index("Project").T.to_dict()
 
