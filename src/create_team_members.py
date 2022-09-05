@@ -139,7 +139,7 @@ def main() -> None:
     # parent_dir = abspath(join(getcwd(), pardir))
     parent_dir = join("/root", "wikibase-nttdata")
     data_dir = join(parent_dir, "data")
-    project_data = join(data_dir, "BDMA_Projects_v1.csv")
+    team_data = join(data_dir, "BDMA_Team_v1.csv")
     column_mapping_data = join(data_dir, "column_mapping.csv")
     items_data = join(data_dir, "items.csv")
     
@@ -147,8 +147,8 @@ def main() -> None:
     column_mapping = df.set_index("column").T.to_dict()
     
     __columns = ["Id", "Name", "Family Name", "Birthdate", "Nationality", "Category", "Start date", "End date"]
-    __df = pd.read_csv(project_data, usecols=__columns).drop_duplicates()
-    __data = __df.set_index("Project").T.to_dict()
+    __df = pd.read_csv(team_data, usecols=__columns).drop_duplicates()
+    __data = __df.set_index("Team").T.to_dict()
 
     __res = list()
     if exists(items_data):
