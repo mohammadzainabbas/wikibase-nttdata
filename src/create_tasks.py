@@ -12,6 +12,7 @@ from wikibaseintegrator.datatypes import (URL, CommonsMedia, ExternalID, Form, G
 from wikibaseintegrator.wbi_enums import ActionIfExists, WikibaseDatePrecision, WikibaseRank, WikibaseSnakType, WikibaseDatatype
 from wikibaseintegrator.wbi_exceptions import MissingEntityException, ModificationFailed, MWApiError
 import pickle
+from datetime import datetime
 
 def print_log(text: str) -> None:
     """
