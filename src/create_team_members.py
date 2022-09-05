@@ -164,6 +164,7 @@ def main() -> None:
     if isinstance(__data, dict):
         __keys = list(__data.keys())
         for __key in __keys:
+            { "{}".format(__key): __data[__key] }
             __res.append(create_team_member(__data[__key], column_mapping, wbi, __res))
     elif isinstance(__data, list):
         for item in __data:
