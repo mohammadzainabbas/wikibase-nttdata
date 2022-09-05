@@ -8,6 +8,6 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX bd: <http://www.bigdata.com/rdf#>
 PREFIX base: <http://wikibase.svc/prop/statement/>
 
-select ?o where {
+select (?o as ?members) where {
   ?s base:P2 ?o
 }
