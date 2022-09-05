@@ -12,6 +12,7 @@ from wikibaseintegrator.datatypes import (URL, CommonsMedia, ExternalID, Form, G
 from wikibaseintegrator.wbi_enums import ActionIfExists, WikibaseDatePrecision, WikibaseRank, WikibaseSnakType, WikibaseDatatype
 from wikibaseintegrator.wbi_exceptions import MissingEntityException, ModificationFailed, MWApiError
 import pickle
+from datetime import datetime
 
 def print_log(text: str) -> None:
     """
@@ -52,7 +53,7 @@ def convert_to_wikibase_datatype(__value, __propcode, __data_type, __res, wbi):
     elif __data_type == WikibaseDatatype.TIME.value:
         # change format to '+%Y-%m-%dT00:00:00Z'
         datetime = __value.strftime('%Y-%m-%dT00:00:00Z')
-        
+
         return Time(time=__value, precision=WikibaseDatePrecision.DAY, prop_nr=__propcode)
     elif __data_type == WikibaseDatatype.URL.value:
         return URL(value=__value, prop_nr=__propcode)
