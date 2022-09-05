@@ -40,8 +40,11 @@ def convert_to_wikibase_datatype(__value, __propcode, __data_type, __res):
     if __data_type == WikibaseDatatype.STRING.value:
         return String(value=__value, prop_nr=__propcode)
     elif (__data_type == "item") or (__data_type == WikibaseDatatype.ITEM.value):
-        __prop_code = pd.DataFrame(__res).set_index("item").T.to_dict()[__value]
-        return Item(value=__value, prop_nr=__propcode)
+        prop_code = pd.DataFrame(__res).set_index("item").T.to_dict()[__value]
+        if not prop_code:
+            print_error("Invalid data type for property: '{}'".format(__propcode))
+        else:
+            return Item(value=__value, prop_nr=prop_code)
     elif __data_type == WikibaseDatatype.QUANTITY.value:
         return Quantity(value=__value, prop_nr=__propcode)
     elif __data_type == WikibaseDatatype.TIME.value:
