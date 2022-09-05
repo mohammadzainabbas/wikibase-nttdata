@@ -1,2 +1,20 @@
 column,prop,data_type
-Project Type,P28,string
+Id,P1,string
+Name,P2,string
+Family Name,P3,string
+Birthdate,P4,time
+Nationality,P5,string
+Start date,P6,time
+End date,P7,time
+Category,P8,wikibase-item
+Task,P9,wikibase-item
+Project Type,P10,string
+Client,P11,string
+Owner,P12,wikibase-item
+Client Type,P13,string
+Task Start date,P14,time
+Task End date,P15,time
+part_of,P16,string
+assigned to,P17,wikibase-item
+supervised by,P18,wikibase-item
+Duration (in days),P19,time
