@@ -53,7 +53,7 @@ def convert_to_wikibase_datatype(__value, __propcode, __data_type, __res, wbi):
     elif __data_type == WikibaseDatatype.TIME.value:
         # change format to '+%Y-%m-%dT00:00:00Z'
         if __propcode == "P19":
-            __date = datetime.strptime(str(__value), '%d').strftime('%Y-%m-%dT00:00:00Z')
+            return String(value=__value, prop_nr=__propcode)
         else:
             __date = datetime.strptime(str(__value), '%d/%m/%Y').strftime('%Y-%m-%dT00:00:00Z')
 
