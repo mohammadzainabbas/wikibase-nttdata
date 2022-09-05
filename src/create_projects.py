@@ -40,7 +40,7 @@ def convert_to_wikibase_datatype(__value, __propcode, __data_type, __res):
     if __data_type == WikibaseDatatype.STRING.value:
         return String(value=__value, prop_nr=__propcode)
     elif (__data_type == "item") or (__data_type == WikibaseDatatype.ITEM.value):
-
+        __res
         return Item(value=__value, prop_nr=__propcode)
     elif __data_type == WikibaseDatatype.QUANTITY.value:
         return Quantity(value=__value, prop_nr=__propcode)
