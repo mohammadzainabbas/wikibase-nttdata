@@ -149,7 +149,7 @@ def main() -> None:
     __columns = ["Id", "Name", "Family Name", "Birthdate", "Nationality", "Category", "Start date", "End date"]
     __df = pd.read_csv(team_data, usecols=__columns).drop_duplicates()
     __df["full_name"] = __df["Name"] + " " + __df["Family Name"]
-    __data = __df.set_index("Team").T.to_dict()
+    __data = __df.set_index("full_name").T.to_dict()
 
     __res = list()
     if exists(items_data):
